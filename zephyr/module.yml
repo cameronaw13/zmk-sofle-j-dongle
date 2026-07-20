@@ -1,3 +1,5 @@
 build:
+  # also compile this repo's own resources via CMakeLists.txt
+  cmake: .
   settings:
      board_root: .
