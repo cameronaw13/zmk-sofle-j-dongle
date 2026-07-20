@@ -68,21 +68,25 @@
     behaviors {
 			n9grave: nine_grave {
 				compatible = "zmk,behavior-mod-morph";
+				#binding-cells = <0>;
 				bindings = <&kp N9>, <&kp GRAVE>;
 				mods = <(MOD_LSFT|MOD_RSFT)>;
 			};
 			n0tilde: zero_tilde {
 				compatible = "zmk,behavior-mod-morph";
+				#binding-cells = <0>;
 				bindings = <&kp N0>, <&kp TILDE>;
 				mods = <(MOD_LSFT|MOD_RSFT)>;
 			};
 			commasemi: comma_semi {
 				compatible = "zmk,behavior-mod-morph";
+				#binding-cells = <0>;
 				bindings = <&kp COMMA>, <&kp SEMI>;
 				mods = <(MOD_LSFT|MOD_RSFT)>;
 			};
 			dotcolon: dot_colon {
 				compatible = "zmk,behavior-mod-morph";
+				#binding-cells = <0>;
 				bindings = <&kp DOT>, <&kp COLON>;
 				mods = <(MOD_LSFT|MOD_RSFT)>;
 			};
