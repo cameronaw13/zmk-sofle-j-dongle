@@ -261,8 +261,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Settings:
+  - {t: Colemak, h: toggle}
   - {t: QWERTY, h: toggle}
-  - {t: NavBrack, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -326,5 +326,5 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [40, 52]
+- p: [39, 51]
   k: $$mdi:alpha-w-box$$
