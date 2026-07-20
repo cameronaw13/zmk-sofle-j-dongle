@@ -4,32 +4,14 @@ manifest:
       url-base: https://github.com/badjeff
     - name: nrfconnect
       url-base: https://github.com/nrfconnect
-    #- name: zmkfirmware
-    #  url-base: https://github.com/zmkfirmware
-    #- name: gpeye
-    #  url-base: https://github.com/GPeye
-    #- name: tokyo2006
-    #  url-base: https://github.com/tokyo2006
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
-    #- name: mario-peripheral-animation
-    #  remote: gpeye
-    #  revision: main 
-    #- name: zmk
-    #  remote: zmkfirmware
-    #  revision: v0.3.0
-    #  import: app/west.yml
-    #- name: prospector-zmk-module                 # <--- and these
-    #  remote: tokyo2006                          # <---
-    #  revision: micro_spi2  
-    #- name: zmk-dongle-display
-    #  remote: englmaxi
-    #  revision: v0.3
-
     #  ZMK 0.4 / Zephyr 4.1 line, via badjeff's fork
     - name: zmk
-      remote: badjeff
+      remote: zmkfirware
       revision: main
       import: app/west.yml
     # Enhanced ShockBurst split transport
@@ -44,6 +26,7 @@ manifest:
     - name: nrfxlib
       remote: nrfconnect
       revision: v3.1-branch
+      repopath: sdk-nrfxlib
       path: nrfxlib
     # Dongle OLED module
     - name: zmk-dongle-display
