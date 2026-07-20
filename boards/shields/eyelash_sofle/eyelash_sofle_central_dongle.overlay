@@ -7,6 +7,9 @@
 
 #include "eyelash_sofle.dtsi"
 
+/* ESB split addresses must match left/right halves */
+#include "eyelash_sofle__esb_addr.dtsi"
+
 /{
     chosen {
         zmk,kscan = &mock_kscan;

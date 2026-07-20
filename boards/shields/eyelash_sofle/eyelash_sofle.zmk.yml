@@ -9,7 +9,7 @@ features:
   - display
 outputs:
   - usb
-  - ble
+  #- ble
 siblings:
   - eyelash_sofle_left
   - eyelash_sofle_right
