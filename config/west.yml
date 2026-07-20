@@ -11,7 +11,7 @@ manifest:
   projects:
     #  ZMK 0.4 / Zephyr 4.1 line, via badjeff's fork
     - name: zmk
-      remote: zmkfirware
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     # Enhanced ShockBurst split transport
@@ -26,7 +26,7 @@ manifest:
     - name: nrfxlib
       remote: nrfconnect
       revision: v3.1-branch
-      repopath: sdk-nrfxlib
+      repo-path: sdk-nrfxlib
       path: nrfxlib
     # Dongle OLED module
     - name: zmk-dongle-display
