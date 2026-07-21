@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-high$$
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG UP
   - $$mdi:skip-next$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -159,9 +159,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
   - $$mdi:volume-low$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - '&mkp MB2'
+  - '&mkp MB3'
+  - '&mkp MB1'
   - $$mdi:skip-previous$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:backspace-reverse-outline$$
@@ -175,7 +175,7 @@ layers:
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG DN
-  - $$mdi:volume-off$$
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: '~'}
   - {t: '1', s: '!'}
@@ -211,14 +211,14 @@ layers:
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp MB2'
-  - '&mkp MB3'
-  - '&mkp MB1'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - INS
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $$mdi:skip-next$$
   - PG UP
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -230,9 +230,9 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:skip-previous$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - '&mkp MB2'
   - $$mdi:volume-low$$
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
