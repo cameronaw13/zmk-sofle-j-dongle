@@ -27,7 +27,7 @@ layers:
   - Y
   - {t: '''', s: '"'}
   - {t: '-', s: _}
-  - NavBrack
+  - Numpad
   - A
   - R
   - S
@@ -39,7 +39,7 @@ layers:
   - E
   - I
   - O
-  - NumNav
+  - Symbol
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -92,7 +92,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - NavBrack
+  - Numpad
   - A
   - S
   - D
@@ -104,7 +104,7 @@ layers:
   - K
   - L
   - {t: '''', s: '"'}
-  - NumNav
+  - Symbol
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -130,7 +130,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - RGUI
   - $$mdi:apple-keyboard-option$$
-  NavBrack:
+  Numpad:
   - F1
   - F2
   - F3
@@ -144,17 +144,17 @@ layers:
   - F10
   - F11
   - F12
-  - {t: NavBrack, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-high$$
   - HOME
   - $$mdi:arrow-up-bold$$
   - PG UP
   - $$mdi:skip-next$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - '&mkp MB2'
+  - INS
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: '`'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
@@ -164,10 +164,10 @@ layers:
   - $$mdi:arrow-right-bold$$
   - $$mdi:skip-previous$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - <
-  - (
-  - {t: '[', s: '{'}
-  - '{'
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - {t: \, s: '|'}
   - Settings
   - {t: '$$mdi:transfer$$', type: trans}
@@ -177,10 +177,10 @@ layers:
   - PG DN
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - '>'
-  - )
-  - {t: ']', s: '}'}
-  - '}'
+  - {t: '0', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  NumNav:
+  Symbol:
   - F1
   - F2
   - F3
@@ -211,9 +211,9 @@ layers:
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '9', s: '`'}
-  - {t: '8', s: '*'}
-  - {t: '7', s: '&'}
+  - '&mkp MB2'
+  - '&mkp MB3'
+  - '&mkp MB1'
   - INS
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $$mdi:skip-next$$
@@ -221,12 +221,12 @@ layers:
   - $$mdi:arrow-up-bold$$
   - HOME
   - $$mdi:volume-high$$
-  - {t: NumNav, h: toggle}
-  - Settings
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '6', s: ^}
-  - {t: '5', s: '%'}
-  - {t: '4', s: $}
+  - Settings
+  - <
+  - '{'
+  - {t: '[', s: '{'}
+  - (
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:skip-previous$$
@@ -236,11 +236,11 @@ layers:
   - $$mdi:volume-low$$
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '>'
+  - '}'
+  - {t: ']', s: '}'}
+  - )
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '3', s: '#'}
-  - {t: '2', s: '@'}
-  - {t: '1', s: '!'}
-  - {t: '0', s: '~'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:play-pause$$
   - PG DN
