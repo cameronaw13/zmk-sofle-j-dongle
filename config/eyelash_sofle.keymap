@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20   // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -31,12 +31,12 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <300>;
+    time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
 };
 
 &caps_word {
-  continue-list =  <UNDERSCORE MINUS BACKSPACE DELETE>;
+  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
 
 / {
@@ -133,9 +133,9 @@
         layer2 {
             bindings = <
 &kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8  &kp F9  &kp F10   &kp F11   &kp F12
-&none   &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &kp INS   &kp N7  &kp N8  &n9grave  &none     &none
-&trans  &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5  &kp N6    &kp BSLH  &mo 4
-&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_MUTE    &mmv MOVE_RIGHT    &n0tilde  &kp N1  &kp N2  &kp N3    &kp PIPE  &trans
+&none   &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &kp INS   &kp N7  &kp N8  &n9grave  &none     &none
+&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5  &kp N6    &kp BSLH  &mo 4
+&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &n0tilde  &kp N1  &kp N2  &kp N3    &kp PIPE  &trans
 &trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans  &trans  &trans    &trans
             >;
 
@@ -146,8 +146,8 @@
         layer3 {
             bindings = <
 &kp F1  &kp F2  &kp F3    &kp F4    &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
-&none   &none   &mkp MB2  &mkp MB3  &mkp MB1  &kp INS    &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &kp UP    &kp HOME   &kp C_VOL_UP  &none
-&mo 4   &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_DN  &trans
+&none   &none   &none     &none     &none     &kp INS    &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME   &kp C_VOL_UP  &none
+&mo 4   &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2   &kp C_VOL_DN  &trans
 &trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &none      &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
 &trans  &trans  &trans    &trans    &trans    &trans     &none              &trans      &trans     &trans    &trans     &trans
             >;
