@@ -144,19 +144,19 @@ layers:
   - F10
   - F11
   - F12
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-high$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG UP
   - $$mdi:skip-next$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - INS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: '`'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - $$mdi:volume-low$$
   - '&mkp MB2'
@@ -177,7 +177,7 @@ layers:
   - PG DN
   - $$mdi:play-pause$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '0', s: '~'}
+  - INS
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -192,7 +192,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Symbol:
@@ -209,19 +209,19 @@ layers:
   - F10
   - F11
   - F12
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - INS
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $$mdi:skip-next$$
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - $$mdi:volume-high$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - Settings
   - <
   - '{'
@@ -240,7 +240,7 @@ layers:
   - '}'
   - {t: ']', s: '}'}
   - )
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - INS
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:play-pause$$
   - PG DN
