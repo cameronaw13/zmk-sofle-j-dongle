@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/ {
+/*/ {
     zip_scroll_scaler: zip_scroll_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
@@ -18,11 +18,11 @@
         codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
         track-remainders;
     };
-};
+};*/
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 1 1>; };
+//&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 1 2>; };
+//&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -36,7 +36,7 @@
 };
 
 &caps_word {
-	continue-list =	<UNDERSCORE MINUS BACKSPACE DELETE>;
+  continue-list =  <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
 
 / {
@@ -48,7 +48,7 @@
         tap-ms = <100>;
     };
 
-    macros {
+    /*macros {
         shift_MB3: shift_MB3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -63,43 +63,43 @@
 
             label = "SHIFT_MB3";
         };
-    };
+    };*/
 
     behaviors {
-			n9grave: nine_grave {
-				compatible = "zmk,behavior-mod-morph";
-				#binding-cells = <0>;
-				bindings = <&kp N9>, <&kp GRAVE>;
-				mods = <(MOD_LSFT|MOD_RSFT)>;
-			};
-			n0tilde: zero_tilde {
-				compatible = "zmk,behavior-mod-morph";
-				#binding-cells = <0>;
-				bindings = <&kp N0>, <&kp TILDE>;
-				mods = <(MOD_LSFT|MOD_RSFT)>;
-			};
-			commasemi: comma_semi {
-				compatible = "zmk,behavior-mod-morph";
-				#binding-cells = <0>;
-				bindings = <&kp COMMA>, <&kp SEMI>;
-				mods = <(MOD_LSFT|MOD_RSFT)>;
-			};
-			dotcolon: dot_colon {
-				compatible = "zmk,behavior-mod-morph";
-				#binding-cells = <0>;
-				bindings = <&kp DOT>, <&kp COLON>;
-				mods = <(MOD_LSFT|MOD_RSFT)>;
-			};
+      n9grave: nine_grave {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N9>, <&kp GRAVE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      n0tilde: zero_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N0>, <&kp TILDE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      commasemi: comma_semi {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SEMI>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      dotcolon: dot_colon {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp COLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
     };
 
-		combos {
-			compatible = "zmk,combos";
-			combo_caps_lock {
-				timeout-ms = <50>;
-				bindings = <&caps_word>;
-				key-positions = <39	51>;
-			};
-		};
+    combos {
+      compatible = "zmk,combos";
+      combo_caps_lock {
+        timeout-ms = <50>;
+        bindings = <&caps_word>;
+        key-positions = <39 51>;
+      };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -116,8 +116,8 @@
            
             display-name = "Colemak";
         };
-				
-				layer1 {
+        
+        layer1 {
             bindings = <
 &kp ESC    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5     &kp UP       &kp N6   &kp N7    &kp N8      &n9grave   &n0tilde  &kp PSCRN
 &kp EQUAL  &kp Q     &kp W     &kp E      &kp R      &kp T      &kp DOWN     &kp Y    &kp U     &kp I       &kp O      &kp P     &kp MINUS
@@ -132,28 +132,28 @@
 
         layer2 {
             bindings = <
-&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&tog 2  &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none     &mkp MB1  &mkp MB3  &mkp MB2  &none     &none
-&trans  &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_PREV    &mmv MOVE_LEFT     &kp LT    &kp LPAR  &kp LBKT  &kp LBRC  &kp BSLH  &mo 4
-&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_MUTE    &mmv MOVE_RIGHT    &kp GT    &kp RPAR  &kp RBKT  &kp RBRC  &kp PIPE  &trans
-&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans    &trans    &trans    &trans
+&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8  &kp F9  &kp F10   &kp F11   &kp F12
+&none   &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &kp INS   &kp N7  &kp N8  &n9grave  &none     &none
+&trans  &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5  &kp N6    &kp BSLH  &mo 4
+&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_MUTE    &mmv MOVE_RIGHT    &n0tilde  &kp N1  &kp N2  &kp N3    &kp PIPE  &trans
+&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "NavBrack";
+            display-name = "Numpad";
         };
 
         layer3 {
             bindings = <
-&kp F1  &kp F2  &kp F3    &kp F4  &kp F5  &kp F6       &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
-&none   &none   &n9grave  &kp N8  &kp N7  &kp INS      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &kp UP    &kp HOME   &kp C_VOL_UP  &tog 3
-&mo 4   &none   &kp N6    &kp N5  &kp N4  &kp DEL      &mmv MOVE_LEFT     &kp C_PREV  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_DN  &trans
-&trans  &none   &kp N3    &kp N2  &kp N1  &n0tilde     &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
-&trans  &trans  &trans    &trans  &trans  &trans       &none              &trans      &trans     &trans    &trans     &trans
+&kp F1  &kp F2  &kp F3    &kp F4    &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
+&none   &none   &mkp MB2  &mkp MB3  &mkp MB1  &kp INS    &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &kp UP    &kp HOME   &kp C_VOL_UP  &none
+&mo 4   &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_DN  &trans
+&trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &none      &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
+&trans  &trans  &trans    &trans    &trans    &trans     &none              &trans      &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "NumNav";
+            display-name = "Symbol";
         };
 
         layer4 {
@@ -165,8 +165,8 @@
 &none   &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
             >;
 
-						sensor-bindings = <&scroll_encoder>;
-						display-name = "Settings";
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "Settings";
         };
     };
 };
