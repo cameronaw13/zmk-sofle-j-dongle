@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20   // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80   // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -28,10 +28,11 @@
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <0>;       // 300
     delay-ms = <0>;                   // 0
+		trigger-period-ms = <8>;          // 8
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <400>;
     acceleration-exponent = <1>;
 };
 
@@ -45,7 +46,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <100>;
+        tap-ms = <10>;
     };
 
     /*macros {
@@ -132,11 +133,11 @@
 
         layer2 {
             bindings = <
-&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8  &kp F9  &kp F10   &kp F11   &kp F12
-&none   &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &kp INS   &kp N7  &kp N8  &n9grave  &none     &none
-&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5  &kp N6    &kp BSLH  &mo 4
-&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &n0tilde  &kp N1  &kp N2  &kp N3    &kp PIPE  &trans
-&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans  &trans  &trans    &trans
+&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8  &kp F9    &kp F10   &kp F11   &kp F12
+&trans  &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none     &kp N7  &kp N8    &n9grave  &none     &trans
+&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5    &kp N6    &kp BSLH  &mo 4
+&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &kp INS   &kp N1  &kp N2    &kp N3    &kp PIPE  &trans
+&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans  &n0tilde  &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -146,9 +147,9 @@
         layer3 {
             bindings = <
 &kp F1  &kp F2  &kp F3    &kp F4    &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
-&none   &none   &none     &none     &none     &kp INS    &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME   &kp C_VOL_UP  &none
+&trans  &none   &none     &none     &none     &none      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME   &kp C_VOL_UP  &trans
 &mo 4   &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2   &kp C_VOL_DN  &trans
-&trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &none      &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
+&trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &kp INS    &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
 &trans  &trans  &trans    &trans    &trans    &trans     &none              &trans      &trans     &trans    &trans     &trans
             >;
 
