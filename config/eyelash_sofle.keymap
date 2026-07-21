@@ -20,9 +20,9 @@
     };
 };
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 1 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 2>; };
 
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -31,7 +31,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <250>;
+    time-to-max-speed-ms = <300>;
     acceleration-exponent = <1>;
 };
 
@@ -133,7 +133,7 @@
         layer2 {
             bindings = <
 &kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&tog 2  &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &mkp MB1  &mkp MB3  &mkp MB2  &none     &none     &none
+&tog 2  &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none     &mkp MB1  &mkp MB3  &mkp MB2  &none     &none
 &trans  &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_PREV    &mmv MOVE_LEFT     &kp LT    &kp LPAR  &kp LBKT  &kp LBRC  &kp BSLH  &mo 4
 &trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_MUTE    &mmv MOVE_RIGHT    &kp GT    &kp RPAR  &kp RBKT  &kp RBRC  &kp PIPE  &trans
 &trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans    &trans    &trans    &trans
@@ -145,11 +145,11 @@
 
         layer3 {
             bindings = <
-&kp F1         &kp F2           &kp F3    &kp F4  &kp F5  &kp F6       &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
-&kp KP_DIVIDE  &kp KP_MULTIPLY  &n9grave  &kp N8  &kp N7  &kp RET      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &kp UP    &kp HOME   &kp C_VOL_UP  &tog 3
-&mo 4          &kp KP_MINUS     &kp N6    &kp N5  &kp N4  &dotcolon    &mmv MOVE_LEFT     &kp C_PREV  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_DN  &trans
-&trans         &kp KP_PLUS      &kp N3    &kp N2  &kp N1  &n0tilde     &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
-&trans         &trans           &trans    &trans  &trans  &trans       &none              &trans      &trans     &trans    &trans     &trans
+&kp F1  &kp F2  &kp F3    &kp F4  &kp F5  &kp F6       &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
+&none   &none   &n9grave  &kp N8  &kp N7  &kp INS      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &kp UP    &kp HOME   &kp C_VOL_UP  &tog 3
+&mo 4   &none   &kp N6    &kp N5  &kp N4  &kp DEL      &mmv MOVE_LEFT     &kp C_PREV  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_DN  &trans
+&trans  &none   &kp N3    &kp N2  &kp N1  &n0tilde     &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
+&trans  &trans  &trans    &trans  &trans  &trans       &none              &trans      &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -158,11 +158,11 @@
 
         layer4 {
             bindings = <
-&to 0   &to 1  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&trans  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&to 0   &to 1  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none  &none
+&none   &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none  &none
+&trans  &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none  &trans
+&none   &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none  &none
+&none   &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
             >;
 
 						sensor-bindings = <&scroll_encoder>;
