@@ -6,5 +6,5 @@ endif()
 
 # dongle display widget still uses ble_peripheral_count instead of central_peripheral_count for some reason
 if(CONFIG_ZMK_SPLIT_ESB AND CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-	zephyr_compile_definitions(ZMK_SPLIT_BLE_PERIPHERAL_COUNT=CONFIG_ZMK_SPLIT_PERIPHERAL_COUNT)
+	zephyr_compile_definitions(ZMK_SPLIT_BLE_PERIPHERAL_COUNT=CONFIG_ZMK_SPLIT_ESB_PERIPHERAL_COUNT)
 endif()
