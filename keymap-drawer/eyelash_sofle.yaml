@@ -168,7 +168,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - {t: \, s: '|'}
+  - {t: \, s: BLSH}
   - Settings
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
@@ -225,7 +225,7 @@ layers:
   - Settings
   - <
   - '{'
-  - {t: '[', s: '{'}
+  - {t: '[', s: '['}
   - (
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
@@ -238,7 +238,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '>'
   - '}'
-  - {t: ']', s: '}'}
+  - {t: ']', s: ']'}
   - )
   - INS
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
