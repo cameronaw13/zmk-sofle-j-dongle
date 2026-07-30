@@ -79,6 +79,12 @@
         bindings = <&kp RBKT>, <&kp RBKT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
       };
+      dotnosft: dot_no_shift {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp DOT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
     };
 
     combos {
@@ -89,6 +95,14 @@
         key-positions = <39 51>;
       };
     };
+
+		conditional-layers {
+			compatible = "zmk,conditional-layers"
+			layer4 {
+				if-layers = <2 3>;
+				then-layer <4>;
+			};
+		};
 
     keymap {
         compatible = "zmk,keymap";
@@ -121,11 +135,11 @@
 
         layer2 {
             bindings = <
-&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7    &kp F8  &kp F9    &kp F10   &kp F11     &kp F12
-&trans  &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none     &kp N7  &kp N8    &n9grave  &none       &trans
-&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL   &kp N4  &kp N5    &kp N6    &bslhnosft  &mo 4
-&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &kp INS   &kp N1  &kp N2    &kp N3    &kp PIPE    &trans
-&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans    &trans  &n0tilde  &trans    &trans
+&kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7   &kp F8  &kp F9    &kp F10   &kp F11     &kp F12
+&trans  &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none    &kp N7  &kp N8    &n9grave  &bslhnosft  &trans
+&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL  &kp N4  &kp N5    &kp N6    &kp PIPE    &trans
+&trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &kp INS  &kp N1  &kp N2    &kp N3    &dotnosft   &trans
+&trans  &trans        &trans    &trans    &trans     &trans        &none              &trans   &trans  &n0tilde  &n0tilde  &n0tilde
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -136,7 +150,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3    &kp F4      &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
 &trans  &none   &none     &none       &none     &none      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME   &kp C_VOL_UP  &trans
-&mo 4   &kp LT  &kp LBRC  &lbktnosft  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2   &kp C_VOL_DN  &trans
+&trans  &kp LT  &kp LBRC  &lbktnosft  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2   &kp C_VOL_DN  &trans
 &trans  &kp GT  &kp RBRC  &rbktnosft  &kp RPAR  &kp INS    &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
 &trans  &trans  &trans    &trans      &trans    &trans     &none              &trans      &trans     &trans    &trans     &trans
             >;
