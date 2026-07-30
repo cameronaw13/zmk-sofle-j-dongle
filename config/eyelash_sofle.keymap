@@ -96,13 +96,13 @@
       };
     };
 
-		conditional-layers {
-			compatible = "zmk,conditional-layers"
-			layer4 {
-				if-layers = <2 3>;
-				then-layer <4>;
-			};
-		};
+    conditional-layers {
+      compatible = "zmk,conditional-layers";
+      layer4 {
+        if-layers = <2 3>;
+        then-layer <4>;
+      };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -136,8 +136,8 @@
         layer2 {
             bindings = <
 &kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7   &kp F8  &kp F9    &kp F10   &kp F11     &kp F12
-&trans  &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none    &kp N7  &kp N8    &n9grave  &bslhnosft  &trans
-&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL  &kp N4  &kp N5    &kp N6    &kp PIPE    &trans
+&trans  &kp C_VOL_UP  &kp HOME  &none     &kp PG_UP  &kp C_NEXT    &mmv MOVE_DOWN     &none    &kp N7  &kp N8    &n9grave  &kp PIPE    &trans
+&trans  &kp C_VOL_DN  &mkp MB2  &mkp MB3  &mkp MB1   &kp C_PREV    &mmv MOVE_LEFT     &kp DEL  &kp N4  &kp N5    &kp N6    &bslhnosft  &trans
 &trans  &kp C_MUTE    &kp END   &none     &kp PG_DN  &kp C_PP      &mmv MOVE_RIGHT    &kp INS  &kp N1  &kp N2    &kp N3    &dotnosft   &trans
 &trans  &trans        &trans    &trans    &trans     &trans        &none              &trans   &trans  &n0tilde  &n0tilde  &n0tilde
             >;
