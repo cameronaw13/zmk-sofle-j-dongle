@@ -64,7 +64,7 @@
       bslhnosft: backslash_no_shift {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp BSLH>, <&kp BLSH>;
+        bindings = <&kp BSLH>, <&kp BSLH>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
       };
       lbktnosft: leftbracket_no_shift {
