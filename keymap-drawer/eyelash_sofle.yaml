@@ -27,7 +27,7 @@ layers:
   - Y
   - {t: '''', s: '"'}
   - {t: '-', s: _}
-  - Numpad
+  - $$mdi:apple-keyboard-shift$$
   - A
   - R
   - S
@@ -39,8 +39,8 @@ layers:
   - E
   - I
   - O
-  - Symbol
   - $$mdi:apple-keyboard-shift$$
+  - Numpad
   - Z
   - X
   - C
@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - Symbol
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -92,7 +92,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - Numpad
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -104,8 +104,8 @@ layers:
   - K
   - L
   - {t: '''', s: '"'}
-  - Symbol
   - $$mdi:apple-keyboard-shift$$
+  - Symbol
   - Z
   - X
   - C
@@ -117,7 +117,7 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - Symbol
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -157,7 +157,7 @@ layers:
   - {t: '9', s: '`'}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-low$$
   - '&mkp MB2'
   - '&mkp MB3'
@@ -170,7 +170,7 @@ layers:
   - {t: '6', s: ^}
   - {t: \, s: \}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:volume-off$$
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -234,8 +234,8 @@ layers:
   - '&mkp MB3'
   - '&mkp MB2'
   - $$mdi:volume-low$$
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - '>'
   - '}'
   - {t: ']', s: ']'}
@@ -247,7 +247,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - END
   - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -261,7 +261,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Settings:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB ON
   - RGB BRI
   - RGB EFF
   - RGB SPI
@@ -274,10 +274,23 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB TOG
+  - RGB OFF
   - RGB BRD
   - RGB EFR
   - RGB SPD
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -312,19 +325,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [39, 51]
+- p: [26, 38]
   k: $$mdi:alpha-w-box$$
