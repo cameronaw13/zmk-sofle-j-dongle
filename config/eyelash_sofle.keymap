@@ -92,7 +92,7 @@
       combo_caps_lock {
         timeout-ms = <50>;
         bindings = <&caps_word>;
-        key-positions = <39 51>;
+        key-positions = <26 38>;
       };
     };
 
@@ -111,8 +111,8 @@
             bindings = <
 &kp ESC    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5     &kp UP       &kp N6   &kp N7    &kp N8      &n9grave   &n0tilde  &kp PSCRN
 &kp EQUAL  &kp Q     &kp W     &kp F      &kp P      &kp B      &kp DOWN     &kp J    &kp L     &kp U       &kp Y      &kp SQT   &kp MINUS
-&mo 2      &kp A     &kp R     &kp S      &kp T      &kp G      &kp LEFT     &kp M    &kp N     &kp E       &kp I      &kp O     &mo 3
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp D      &kp V      &kp RIGHT    &kp K    &kp H     &commasemi  &dotcolon  &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp A     &kp R     &kp S      &kp T      &kp G      &kp LEFT     &kp M    &kp N     &kp E       &kp I      &kp O     &kp RSHFT
+&mo 2      &kp Z     &kp X     &kp C      &kp D      &kp V      &kp RIGHT    &kp K    &kp H     &commasemi  &dotcolon  &kp FSLH  &mo 3
 &none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &kp TAB    &none        &kp RET  &kp BSPC  &kp RCTRL   &kp RGUI   &kp RALT
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -124,8 +124,8 @@
             bindings = <
 &kp ESC    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5     &kp UP       &kp N6   &kp N7    &kp N8      &n9grave   &n0tilde  &kp PSCRN
 &kp EQUAL  &kp Q     &kp W     &kp E      &kp R      &kp T      &kp DOWN     &kp Y    &kp U     &kp I       &kp O      &kp P     &kp MINUS
-&mo 2      &kp A     &kp S     &kp D      &kp F      &kp G      &kp LEFT     &kp H    &kp J     &kp K       &kp L      &kp SQT   &mo 3
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B      &kp RIGHT    &kp N    &kp M     &commasemi  &dotcolon  &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp A     &kp S     &kp D      &kp F      &kp G      &kp LEFT     &kp H    &kp J     &kp K       &kp L      &kp SQT   &kp RSHFT
+&mo 3      &kp Z     &kp X     &kp C      &kp V      &kp B      &kp RIGHT    &kp N    &kp M     &commasemi  &dotcolon  &kp FSLH  &mo 3
 &none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &kp TAB    &none        &kp RET  &kp BSPC  &kp RCTRL   &kp RGUI   &kp RALT
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -148,11 +148,11 @@
 
         layer3 {
             bindings = <
-&kp F1  &kp F2  &kp F3    &kp F4      &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
-&trans  &none   &none     &none       &none     &none      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME   &kp C_VOL_UP  &trans
-&trans  &kp LT  &kp LBRC  &lbktnosft  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2   &kp C_VOL_DN  &trans
-&trans  &kp GT  &kp RBRC  &rbktnosft  &kp RPAR  &kp INS    &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END    &kp C_MUTE    &trans
-&trans  &trans  &trans    &trans      &trans    &trans     &none              &trans      &trans     &trans    &trans     &trans
+&kp F1  &kp F2  &kp F3    &kp F4      &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10   &kp F11       &kp F12
+&trans  &none   &none     &none       &none     &none      &mmv MOVE_DOWN     &kp C_NEXT  &kp PG_UP  &none     &kp HOME  &kp C_VOL_UP  &trans
+&trans  &kp LT  &kp LBRC  &lbktnosft  &kp LPAR  &kp DEL    &mmv MOVE_LEFT     &kp C_PREV  &mkp MB1   &mkp MB3  &mkp MB2  &kp C_VOL_DN  &trans
+&trans  &kp GT  &kp RBRC  &rbktnosft  &kp RPAR  &kp INS    &mmv MOVE_RIGHT    &kp C_PP    &kp PG_DN  &none     &kp END   &kp C_MUTE    &trans
+&trans  &trans  &trans    &trans      &trans    &trans     &none              &trans      &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -161,11 +161,11 @@
 
         layer4 {
             bindings = <
-&none            &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &none  &none    &none    &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &none  &none    &none    &none  &none  &none  &none  &none  &none
-&none            &to 0            &to 1            &none            &none  &none    &none    &none  &none  &none  &none  &none  &none
+&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &none  &none    &none    &none  &none  &none  &none  &none  &none
+&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &none  &none    &none    &none  &none  &none  &none  &none  &none
 &none            &none            &none            &none            &none  &none    &none    &none  &none  &none  &none  &none  &none
-&none            &none            &none            &none            &none  &none    &none    &none  &none  &none  &none  &none
+&none            &to 0            &to 1            &none            &none  &none    &none    &none  &none  &none  &none  &none  &none
+&none            &none            &none            &none            &none  &none    &none    &none  &none  &none  &none  &none 
             >;
 
             sensor-bindings = <&scroll_encoder>;
