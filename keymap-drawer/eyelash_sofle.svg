@@ -631,10 +631,10 @@ rect.held, rect.combo.held {
 <use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo combopos-0">
-<path d="M462,294 l-54,0" class="combo"/>
-<path d="M462,294 l54,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="285" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+<path d="M462,168 l-415,0" class="combo"/>
+<path d="M462,168 l415,0" class="combo"/>
+<rect rx="6" ry="6" x="448" y="155" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="159" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
@@ -983,6 +983,12 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">\</text>
 <text x="0" y="-24" class="key shifted">|</text>
+</g>
+<g class="combo combopos-0">
+<path d="M462,168 l-415,0" class="combo"/>
+<path d="M462,168 l415,0" class="combo"/>
+<rect rx="6" ry="6" x="448" y="155" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="159" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
@@ -1337,10 +1343,10 @@ rect.held, rect.combo.held {
 <text x="0" y="-24" class="key shifted">~</text>
 </g>
 <g class="combo combopos-0">
-<path d="M462,294 l-54,0" class="combo"/>
-<path d="M462,294 l54,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="285" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+<path d="M462,168 l-415,0" class="combo"/>
+<path d="M462,168 l415,0" class="combo"/>
+<rect rx="6" ry="6" x="448" y="155" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="159" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
@@ -1677,10 +1683,10 @@ rect.held, rect.combo.held {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M462,294 l-54,0" class="combo"/>
-<path d="M462,294 l54,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="285" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+<path d="M462,168 l-415,0" class="combo"/>
+<path d="M462,168 l415,0" class="combo"/>
+<rect rx="6" ry="6" x="448" y="155" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="159" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
@@ -2034,6 +2040,12 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+</g>
+<g class="combo combopos-0">
+<path d="M462,168 l-415,0" class="combo"/>
+<path d="M462,168 l415,0" class="combo"/>
+<rect rx="6" ry="6" x="448" y="155" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="453" y="159" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
