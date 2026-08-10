@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: cameronaw13
+      url-base: https://github.com/cameronaw13
     - name: nrfconnect
       url-base: https://github.com/nrfconnect
     - name: zmkfirmware
@@ -16,7 +18,7 @@ manifest:
       import: app/west.yml
     # Enhanced ShockBurst split transport
     - name: zmk-feature-split-esb
-      remote: badjeff
+      remote: cameronaw13
       revision: main
     # Nordic NCS 3.1 + nrfxlib for ESB driver + MPSL radio layer
     - name: sdk-nrf
