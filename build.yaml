@@ -2,6 +2,7 @@
 include:
   - board: nice_nano@2.0.0//zmk
     shield: eyelash_sofle_central_dongle dongle_display
+    snippet: zmk-usb-logging
     artifact-name: eyelash_sofle_central_dongle_oled
   - board: nice_nano@2.0.0//zmk
     shield: eyelash_sofle_peripheral_left nice_view
