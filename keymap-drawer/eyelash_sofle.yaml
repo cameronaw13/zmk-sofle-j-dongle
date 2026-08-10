@@ -81,8 +81,8 @@ layers:
   - {t: '=', s: +}
   - {t: '`', s: '~'}
   - Q
-  - E
   - W
+  - E
   - R
   - T
   - $$mdi:arrow-down-bold$$
@@ -93,10 +93,10 @@ layers:
   - P
   - {t: '-', s: _}
   - $$mdi:apple-keyboard-shift$$
-  - F
   - A
   - S
   - D
+  - F
   - G
   - $$mdi:arrow-left-bold$$
   - H
