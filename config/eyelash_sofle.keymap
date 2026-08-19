@@ -99,7 +99,7 @@
     conditional-layers {
       compatible = "zmk,conditional-layers";
       colemakto6 {
-        if-layers = <2 3>;
+        if-layers = <1 2>;
         then-layer = <6>;
       };
       gamingto6 {
@@ -118,25 +118,13 @@
 &kp EQUAL  &kp Q     &kp W     &kp F      &kp P      &kp B     &kp DOWN     &kp J   &kp L     &kp U       &kp Y      &kp SQT   &kp MINUS
 &kp LSHFT  &kp A     &kp R     &kp S      &kp T      &kp G     &kp LEFT     &kp M   &kp N     &kp E       &kp I      &kp O     &kp RSHFT
 &kp TAB    &kp Z     &kp X     &kp C      &kp D      &kp V     &kp RIGHT    &kp K   &kp H     &commasemi  &dotcolon  &kp FSLH  &kp RET
-&none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &mo 2     &none        &mo 3   &kp BSPC  &kp RCTRL   &kp RGUI   &kp RALT
+&none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &mo 1     &none        &mo 2   &kp BSPC  &kp RCTRL   &kp RGUI   &kp RALT
             >;
             sensor-bindings = <&scroll_encoder>;
             display-name = "Colemak";
         };
 
         layer1 {
-            bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5   &kp UP       &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
-&kp GRAVE  &kp Q     &kp W     &kp E      &kp R      &kp T    &kp DOWN     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp MINUS
-&kp LSHFT  &kp A     &kp S     &kp D      &kp F      &kp G    &kp LEFT     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp TAB    &kp Z     &kp X     &kp C      &kp V      &kp B    &kp RIGHT    &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RET
-&none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &tog 4   &none        &tog 5  &kp BSPC  &kp LBKT   &kp RBKT  &kp BSLH
-            >;
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "Gaming";
-        };
-
-        layer2 {
             bindings = <
 &kp F1  &kp F2        &kp F3    &kp F4    &kp F5     &kp F6        &mmv MOVE_UP       &kp F7   &kp F8  &kp F9  &kp F10   &kp F11     &kp F12
 &trans  &kp C_MUTE    &kp HOME  &none     &kp PG_UP  &kp C_PP      &mmv MOVE_DOWN     &none    &kp N7  &kp N8  &n9grave  &kp PIPE    &trans
@@ -148,7 +136,7 @@
             display-name = "Numpad";
         };
 
-        layer3 {
+        layer2 {
             bindings = <
 &kp F1  &kp F2  &kp F3    &kp F4      &kp F5    &kp F6     &mmv MOVE_UP       &kp F7      &kp F8     &kp F9    &kp F10    &kp F11       &kp F12
 &trans  &none   &none     &none       &none     &none      &mmv MOVE_DOWN     &kp C_PP    &kp PG_UP  &kp UP    &kp HOME   &kp C_MUTE    &trans
@@ -158,6 +146,18 @@
             >;
             sensor-bindings = <&scroll_encoder>;
             display-name = "Symbol";
+        };
+
+        layer3 {
+            bindings = <
+&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5   &kp UP       &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
+&kp GRAVE  &kp Q     &kp W     &kp E      &kp R      &kp T    &kp DOWN     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp MINUS
+&kp LSHFT  &kp A     &kp S     &kp D      &kp F      &kp G    &kp LEFT     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp TAB    &kp Z     &kp X     &kp C      &kp V      &kp B    &kp RIGHT    &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RET
+&none      &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &tog 4   &none        &tog 5  &kp BSPC  &kp LBKT   &kp RBKT  &kp BSLH
+            >;
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "Gaming";
         };
 
         layer4 {
@@ -188,7 +188,7 @@
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI    &none    &none  &none  &none  &none  &none  &none
 &none            &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD    &none    &none  &none  &none  &none  &none  &none
-&none            &to 0            &to 1            &none            &none            &none              &none    &none  &none  &none  &none  &none  &none
+&none            &to 0            &to 3            &none            &none            &none              &none    &none  &none  &none  &none  &none  &none
 &none            &none            &none            &none            &none            &none              &none    &none  &none  &none  &none  &none  &none
 &none            &none            &none            &none            &none            &none              &none    &none  &none  &none  &none  &none 
             >;
